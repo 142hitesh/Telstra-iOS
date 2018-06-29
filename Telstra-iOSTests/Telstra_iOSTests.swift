@@ -2,7 +2,7 @@
 //  Telstra_iOSTests.swift
 //  Telstra-iOSTests
 //
-//  Created by Arun on 6/29/18.
+//  Created by Hitesh on 6/29/18.
 //  Copyright © 2018 Hitesh. All rights reserved.
 //
 

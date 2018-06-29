@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  TableViewController.swift
 //  Telstra-iOS
 //
-//  Created by Arun on 6/29/18.
+//  Created by Hitesh on 6/29/18.
 //  Copyright © 2018 Hitesh. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class TableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

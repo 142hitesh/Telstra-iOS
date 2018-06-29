@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Telstra-iOS
 //
-//  Created by Arun on 6/29/18.
+//  Created by Hitesh on 6/29/18.
 //  Copyright © 2018 Hitesh. All rights reserved.
 //
 
@@ -15,7 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow()
+        window?.makeKeyAndVisible()
+        
+        //set window rootViewController
+        let navController = UINavigationController(rootViewController: TableViewController())
+        if #available(iOS 11.0, *) {
+            navController.navigationBar.prefersLargeTitles = true
+        }
+        
+        window?.rootViewController = navController
+        
         return true
     }
 
