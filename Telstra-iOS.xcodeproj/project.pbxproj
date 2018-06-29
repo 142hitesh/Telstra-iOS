@@ -13,6 +13,8 @@
 		628102CC20E630B9001D73EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 628102CB20E630B9001D73EF /* Assets.xcassets */; };
 		628102CF20E630B9001D73EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 628102CD20E630B9001D73EF /* LaunchScreen.storyboard */; };
 		628102DA20E630B9001D73EF /* Telstra_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628102D920E630B9001D73EF /* Telstra_iOSTests.swift */; };
+		628102E720E63A9C001D73EF /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628102E620E63A9C001D73EF /* RequestHandler.swift */; };
+		628102EA20E63C5B001D73EF /* FactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628102E920E63C5B001D73EF /* FactCell.swift */; };
 		66D517DD1F5A933F43360C52 /* Pods_Telstra_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF06390328778D6F844011C /* Pods_Telstra_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		628102D520E630B9001D73EF /* Telstra-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Telstra-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		628102D920E630B9001D73EF /* Telstra_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Telstra_iOSTests.swift; sourceTree = "<group>"; };
 		628102DB20E630B9001D73EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		628102E620E63A9C001D73EF /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		628102E920E63C5B001D73EF /* FactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCell.swift; sourceTree = "<group>"; };
 		6532F7FDD1E6551F8A7EB8BD /* Pods-Telstra-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telstra-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Telstra-iOSTests/Pods-Telstra-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		925AD47DD5C5AF12290216B7 /* Pods-Telstra-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telstra-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Telstra-iOS/Pods-Telstra-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		A96D77410E6588EADA2D1A5B /* Pods-Telstra-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telstra-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Telstra-iOSTests/Pods-Telstra-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,8 +91,10 @@
 		628102C320E630B9001D73EF /* Telstra-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				628102E820E63C40001D73EF /* View */,
+				628102E520E63A77001D73EF /* Request */,
 				628102C420E630B9001D73EF /* AppDelegate.swift */,
-				628102C620E630B9001D73EF /* TableViewController.swift */,
+				628102E420E639D1001D73EF /* Controller */,
 				628102CB20E630B9001D73EF /* Assets.xcassets */,
 				628102CD20E630B9001D73EF /* LaunchScreen.storyboard */,
 				628102D020E630B9001D73EF /* Info.plist */,
@@ -103,6 +109,30 @@
 				628102DB20E630B9001D73EF /* Info.plist */,
 			);
 			path = "Telstra-iOSTests";
+			sourceTree = "<group>";
+		};
+		628102E420E639D1001D73EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				628102C620E630B9001D73EF /* TableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		628102E520E63A77001D73EF /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				628102E620E63A9C001D73EF /* RequestHandler.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		628102E820E63C40001D73EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				628102E920E63C5B001D73EF /* FactCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B9C208550F1C0892C49A033C /* Pods */ = {
@@ -289,6 +319,8 @@
 			files = (
 				628102C720E630B9001D73EF /* TableViewController.swift in Sources */,
 				628102C520E630B9001D73EF /* AppDelegate.swift in Sources */,
+				628102E720E63A9C001D73EF /* RequestHandler.swift in Sources */,
+				628102EA20E63C5B001D73EF /* FactCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

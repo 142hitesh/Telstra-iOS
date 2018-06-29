@@ -1,0 +1,6 @@
+framework module Pods_Telstra_iOS {
+  umbrella header "Pods-Telstra-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

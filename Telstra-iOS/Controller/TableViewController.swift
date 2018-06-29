@@ -8,18 +8,95 @@
 
 import UIKit
 
-class TableViewController: UIViewController {
+// MARK: - Country and Fact Models
+
+struct Country: Codable {
+    let title: String
+    let facts: [Fact]
+    
+    enum CodingKeys: String, CodingKey {
+        case title
+        case facts = "rows"
+    }
+}
+
+struct Fact: Codable {
+    let title: String?
+    let desc: String?
+    let imageURLString: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case title
+        case desc = "description"
+        case imageURLString = "imageHref"
+    }
+}
+
+// MARK: - UIViewController
+
+
+class TableViewController: UITableViewController {
+    
+    fileprivate let requestHandler = RequestHandler()
+    fileprivate var facts: [Fact] = []
+    
+    fileprivate let cellIdentifier = "factCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        setupTableView()
+        fetchCountryData()
+    }
+    
+    // MARK: - Private Methods
+    
+    private func setupTableView() {
+        
+        //Register TableView Cell
+        tableView.estimatedRowHeight = 60
+        tableView.register(FactCell.self, forCellReuseIdentifier: cellIdentifier)
+        
+        // Configure Refresh Control
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(refreshCountryData(_:)), for: .valueChanged)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func fetchCountryData() {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        requestHandler.requestCountryData { (result, errorMessage) in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            if let result = result {
+                self.title = result.title
+                
+                self.facts = result.facts
+                self.tableView.reloadData()
+                self.refreshControl?.endRefreshing()
+            }
+        }
     }
-
+    
+    //refresh controller selector
+    @objc private func refreshCountryData(_ sender: Any) {
+        // Fetch Country Data
+        fetchCountryData()
+    }
 
 }
+
+// MARK: - Table view data source
+
+extension TableViewController {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return facts.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FactCell
+        cell.configure(facts[indexPath.row])
+        return cell
+    }
+}
+
 
