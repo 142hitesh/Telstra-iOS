@@ -32,7 +32,7 @@ class RequestHandler {
             var countryData: Country?
             if let error = error {
                 errorMessage += "DataTask error: " + error.localizedDescription + "\n"
-            } else if let data = self.trimResult(data),
+            } else if let data = self.trimResult(data), //trim data string to avoid json error
                 let response = response as? HTTPURLResponse,
                 response.statusCode == 200 {
                 

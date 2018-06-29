@@ -91,9 +91,9 @@
 		628102C320E630B9001D73EF /* Telstra-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				628102C420E630B9001D73EF /* AppDelegate.swift */,
 				628102E820E63C40001D73EF /* View */,
 				628102E520E63A77001D73EF /* Request */,
-				628102C420E630B9001D73EF /* AppDelegate.swift */,
 				628102E420E639D1001D73EF /* Controller */,
 				628102CB20E630B9001D73EF /* Assets.xcassets */,
 				628102CD20E630B9001D73EF /* LaunchScreen.storyboard */,
