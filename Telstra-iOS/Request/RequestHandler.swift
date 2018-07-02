@@ -8,6 +8,8 @@
 
 import Foundation
 
+let countryEndPoint: String = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
+
 class RequestHandler {
     
     typealias Result = (Country?, String?) -> ()
@@ -22,12 +24,12 @@ class RequestHandler {
         var errorMessage: String?
         var countryData: Country?
         
+        guard let url = URL(string: countryEndPoint) else {
+            print("Error: cannot create URL")
+            return
+        }
+        
         ReachabilityManager.isReachable { _ in
-            let endPoint: String = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
-            guard let url = URL(string: endPoint) else {
-                print("Error: cannot create URL")
-                return
-            }
             
             self.dataTask = self.defaultSession.dataTask(with: url) { [weak self] (data, response, error) in
                 defer { self?.dataTask = nil }
@@ -54,7 +56,7 @@ class RequestHandler {
         }
         
         ReachabilityManager.isUnreachable { _ in
-            errorMessage = "You are Offline"
+            errorMessage = "You are offline"
             completion(countryData, errorMessage)
         }
     }

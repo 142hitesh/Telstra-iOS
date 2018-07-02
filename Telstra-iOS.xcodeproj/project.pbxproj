@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1FD1625ECE10D9BB494E6556 /* Pods_Telstra_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C17BA795547947E5469B7CD5 /* Pods_Telstra_iOSTests.framework */; };
 		6236699F20EA4272008813F3 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6236699E20EA4272008813F3 /* ReachabilityManager.swift */; };
+		623669A120EA8685008813F3 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628102E620E63A9C001D73EF /* RequestHandler.swift */; };
 		628102C520E630B9001D73EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628102C420E630B9001D73EF /* AppDelegate.swift */; };
 		628102C720E630B9001D73EF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628102C620E630B9001D73EF /* TableViewController.swift */; };
 		628102CC20E630B9001D73EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 628102CB20E630B9001D73EF /* Assets.xcassets */; };
@@ -70,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		623669A020EA4AEA008813F3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6236699E20EA4272008813F3 /* ReachabilityManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		628102B820E630B9001D73EF = {
 			isa = PBXGroup;
 			children = (
@@ -94,13 +103,13 @@
 			isa = PBXGroup;
 			children = (
 				628102C420E630B9001D73EF /* AppDelegate.swift */,
-				628102E820E63C40001D73EF /* View */,
-				628102E520E63A77001D73EF /* Request */,
 				628102E420E639D1001D73EF /* Controller */,
+				623669A020EA4AEA008813F3 /* Helpers */,
+				628102E520E63A77001D73EF /* Request */,
+				628102E820E63C40001D73EF /* View */,
 				628102CB20E630B9001D73EF /* Assets.xcassets */,
 				628102CD20E630B9001D73EF /* LaunchScreen.storyboard */,
 				628102D020E630B9001D73EF /* Info.plist */,
-				6236699E20EA4272008813F3 /* ReachabilityManager.swift */,
 			);
 			path = "Telstra-iOS";
 			sourceTree = "<group>";
@@ -334,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				623669A120EA8685008813F3 /* RequestHandler.swift in Sources */,
 				628102DA20E630B9001D73EF /* Telstra_iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

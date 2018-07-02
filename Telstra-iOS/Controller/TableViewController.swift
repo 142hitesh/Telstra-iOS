@@ -74,9 +74,7 @@ class TableViewController: UITableViewController {
                 self?.tableView.reloadData()
                 
             } else if let errorMessage = errorMessage {
-                if self?.facts.count == 0 {//don't show alert while refreshing the tableview
-                    self?.showErrorAlert(errorMessage)
-                }
+                self?.showErrorAlert(errorMessage)
             }
         }
     }
