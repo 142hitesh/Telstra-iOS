@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ACBBCB8013CA42F9E7EF9D98DCC7A1ED"
+               BlueprintIdentifier = "D17EE74177FBC43D8A95F1A689C0C898"
                BuildableName = "Pods_Telstra_iOS.framework"
                BlueprintName = "Pods-Telstra-iOS"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ACBBCB8013CA42F9E7EF9D98DCC7A1ED"
+            BlueprintIdentifier = "D17EE74177FBC43D8A95F1A689C0C898"
             BuildableName = "Pods_Telstra_iOS.framework"
             BlueprintName = "Pods-Telstra-iOS"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -64,14 +64,19 @@ class TableViewController: UITableViewController {
 
     private func fetchCountryData() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        requestHandler.requestCountryData { (result, errorMessage) in
+        requestHandler.requestCountryData { [weak self] (result, errorMessage) in
+            self?.refreshControl?.endRefreshing()
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
             if let result = result {
-                self.title = result.title
+                self?.title = result.title
                 
-                self.facts = result.facts
-                self.tableView.reloadData()
-                self.refreshControl?.endRefreshing()
+                self?.facts = result.facts
+                self?.tableView.reloadData()
+                
+            } else if let errorMessage = errorMessage {
+                if self?.facts.count == 0 {//don't show alert while refreshing the tableview
+                    self?.showErrorAlert(errorMessage)
+                }
             }
         }
     }
@@ -81,7 +86,13 @@ class TableViewController: UITableViewController {
         // Fetch Country Data
         fetchCountryData()
     }
-
+ 
+    private func showErrorAlert(_ errorMessage: String) {
+        let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        self.navigationController?.present(alert, animated: true, completion: nil)
+    }
 }
 
 // MARK: - Table view data source
