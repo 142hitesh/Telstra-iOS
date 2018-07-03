@@ -10,6 +10,9 @@
 		1FD1625ECE10D9BB494E6556 /* Pods_Telstra_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C17BA795547947E5469B7CD5 /* Pods_Telstra_iOSTests.framework */; };
 		6236699F20EA4272008813F3 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6236699E20EA4272008813F3 /* ReachabilityManager.swift */; };
 		623669A120EA8685008813F3 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628102E620E63A9C001D73EF /* RequestHandler.swift */; };
+		623669A220EB4616008813F3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628102C620E630B9001D73EF /* TableViewController.swift */; };
+		623669A320EB461B008813F3 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6236699E20EA4272008813F3 /* ReachabilityManager.swift */; };
+		623669A420EB4622008813F3 /* FactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628102E920E63C5B001D73EF /* FactCell.swift */; };
 		628102C520E630B9001D73EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628102C420E630B9001D73EF /* AppDelegate.swift */; };
 		628102C720E630B9001D73EF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628102C620E630B9001D73EF /* TableViewController.swift */; };
 		628102CC20E630B9001D73EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 628102CB20E630B9001D73EF /* Assets.xcassets */; };
@@ -343,7 +346,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				623669A320EB461B008813F3 /* ReachabilityManager.swift in Sources */,
 				623669A120EA8685008813F3 /* RequestHandler.swift in Sources */,
+				623669A420EB4622008813F3 /* FactCell.swift in Sources */,
+				623669A220EB4616008813F3 /* TableViewController.swift in Sources */,
 				628102DA20E630B9001D73EF /* Telstra_iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
